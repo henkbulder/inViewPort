@@ -1,6 +1,5 @@
 (function($){
 	$.fn.inViewPort = function ( options ) {
-
 		var settings = $.extend({'minPercentageInView' : 100}, options);
 		this.each(function() {
   			var $this = $(this),
