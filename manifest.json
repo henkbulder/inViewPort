@@ -1,0 +1,16 @@
+{
+	"name": "inViewPort",
+	"version": "0.1.0",
+	"title": "inViewPort",
+	"author": "Henk Bulder",
+	"licences": [{
+		"type": "MIT",
+		"url": "http://opensource.org/licenses/MIT"
+		}],
+	"dependencies": {"jquery": "*"},
+	"description": "Adds a CSS class to selected elements when they are in the viewport.",
+	"keywords": ["visible", "scroll", "viewport"],
+	"homepage": "https://github.com/henkbulder/inViewPort",
+	"docs": "https://github.com/henkbulder/inViewPort",
+	"bugs": "https://github.com/henkbulder/inViewPort/issues"
+}
