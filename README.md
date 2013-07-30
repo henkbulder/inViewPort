@@ -1,7 +1,7 @@
 inViewPort
 ==========
 
-jQuert plugin that adds a CSS class to elements when they are in the viewport.
+jQuery plugin that adds a CSS class to selected elements when they are in the viewport.
 
 Usage: $(selector).inViewPort(options),
 
@@ -12,3 +12,7 @@ where options is an object which may contain two properties: 'threshold' and 'cl
 Threshold defaults to 100. 
 
 'className' sets the name of the class. Defaults to 'in-view'.
+
+Licence
+-------
+Released under the [MIT license](http://opensource.org/licenses/MIT).
