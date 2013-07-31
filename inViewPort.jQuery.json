@@ -2,8 +2,11 @@
 	"name": "inViewPort",
 	"version": "0.1.0",
 	"title": "inViewPort",
-	"author": "Henk Bulder",
-	"licences": [{
+	"author": {
+		"name": "Henk Bulder",
+		"url": "https://github.com/henkbulder"
+		},
+	"licenses": [{
 		"type": "MIT",
 		"url": "http://opensource.org/licenses/MIT"
 		}],
