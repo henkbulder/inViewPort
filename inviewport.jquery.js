@@ -31,4 +31,4 @@
         .on('vis', isVisible);
     });
   };
-})(jQuery);
+}(jQuery));
