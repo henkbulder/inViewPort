@@ -1,4 +1,6 @@
+/*jslint browser: true, indent: 2 */
 (function ($) {
+  'use strict';
   $.fn.inViewPort = function (options) {
     var settings = $.extend({'minPercentageInView' : 100}, options);
     this.each(function () {
