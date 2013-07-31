@@ -9,7 +9,10 @@ Usage: `$(selector).inviewport(options)`,
 
 where options is an object which may contain two properties: 'threshold' and 'className':
 
-`$('#target').inviewport({threshold: 75, className: 'in-view'})`
+    $('#target').inviewport({
+      threshold: 75, 
+      className: 'myClass'
+    })
 
 'threshold' sets the minimum percentage of the element which has to be in view before the class gets added. 
 
