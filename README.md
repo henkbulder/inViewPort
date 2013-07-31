@@ -1,7 +1,7 @@
 inViewPort
 ==========
 
-jQuery plugin that adds a CSS class to selected elements when they are in the viewport. 
+jQuery plugin that adds a CSS class to selected elements when they have been scrolled into the viewport for the first time.
 
 Use it to activate some particular behaviour when the target element is scrolled into view for the first time. Note that the plugin _does not remove the classname_ once the target element is scrolled out of view again.
 
