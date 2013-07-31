@@ -11,7 +11,7 @@
 		"url": "http://opensource.org/licenses/MIT"
 		}],
 	"dependencies": {"jquery": "*"},
-	"description": "Adds a CSS class to selected elements when they are in the viewport.",
+	"description": "jQuery plugin that adds a CSS class to selected elements when they have been scrolled into the viewport for the first time.",
 	"keywords": ["visible", "scroll", "viewport"],
 	"homepage": "https://github.com/henkbulder/inViewPort",
 	"docs": "https://github.com/henkbulder/inViewPort",
