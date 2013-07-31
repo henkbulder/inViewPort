@@ -3,9 +3,11 @@ inViewPort
 
 jQuery plugin that adds a CSS class to selected elements when they are in the viewport.
 
-Usage: $(selector).inViewPort(options),
+Usage: `$(selector).inviewport(options)`,
 
-where options is an object which may contain two properties: 'threshold' and 'className'.
+where options is an object which may contain two properties: 'threshold' and 'className':
+
+`$('#target').inviewport({threshold: 75, className: 'in-view'})`
 
 'threshold' sets the minimum percentage of the element which has to be in view before the class gets added. 
 
