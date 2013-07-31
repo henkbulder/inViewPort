@@ -2,12 +2,15 @@
 (function ($) {
   'use strict';
   $.fn.inviewport = function (options) {
-    var settings = $.extend({'minPercentageInView' : 100}, options);
+    var settings = $.extend({
+      'minPercentageInView' : 100,
+      'standardClassName': 'in-view'
+    }, options);
     this.each(function () {
       var $this = $(this),
         $win = $(window),
         isVisible = function () {
-          var min = settings.minPercentageInView / 100,
+          var min = (settings.threshold || settings.minPercentageInView) / 100,
             xMin = $this.width() * min,
             yMin = $this.height() * min,
             winPosX = $win.scrollLeft() + $win.width(),
@@ -15,7 +18,7 @@
             elPosX = $this.offset().left + xMin,
             elPosY = $this.offset().top + yMin;
           if (winPosX > elPosX && winPosY > elPosY) {
-            $this.addClass('in-view');
+            $this.addClass(settings.className || settings.standardClassName);
             $this.off('vis');
           }
         },
@@ -28,5 +31,4 @@
         .on('vis', isVisible);
     });
   };
-}(jQuery));
-
+})(jQuery);
