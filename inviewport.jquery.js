@@ -9,6 +9,7 @@
     this.each(function () {
       var $this = $(this),
         $win = $(window),
+        changed = false,
         isVisible = function () {
           var min = (settings.threshold || settings.minPercentageInView) / 100,
             xMin = $this.width() * min,
@@ -25,10 +26,17 @@
         trg = function () {
           $this.trigger('vis');
         };
-      $win.on('resize', trg)
-        .on('scroll', trg)
-        .on('ready', trg)
+      $win.on('ready', trg)
+        .on('resize scroll', function () {
+          changed = true;
+        })
         .on('vis', isVisible);
+      setInterval(function () {
+        if (changed) {
+          changed = false;
+          trg();
+        }
+      }, 250);
     });
   };
 }(jQuery));
