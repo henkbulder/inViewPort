@@ -22,9 +22,6 @@
           if (winPosX > elPosX && winPosY > elPosY) {
             $this.addClass(c);
           }
-          if (winPosX < elPosX && winPosY < elPosY) {
-            $this.removeClass(c);
-          }
         };
       $win.on('ready', isVisible())
         .on('resize scroll', function () {
