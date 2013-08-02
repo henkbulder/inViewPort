@@ -11,7 +11,8 @@
         $win = $(window),
         changed = false,
         isVisible = function () {
-          var min = (settings.threshold || settings.minPercentageInView) / 100,
+          var c = settings.className || settings.standardClassName,
+            min = (settings.threshold || settings.minPercentageInView) / 100,
             xMin = $this.width() * min,
             yMin = $this.height() * min,
             winPosX = $win.scrollLeft() + $win.width(),
@@ -19,21 +20,20 @@
             elPosX = $this.offset().left + xMin,
             elPosY = $this.offset().top + yMin;
           if (winPosX > elPosX && winPosY > elPosY) {
-            $this.addClass(settings.className || settings.standardClassName);
+            $this.addClass(c);
           }
-        },
-        trg = function () {
-          $this.trigger('vis');
+          if (winPosX < elPosX && winPosY < elPosY) {
+            $this.removeClass(c);
+          }
         };
-      $win.on('ready', trg)
+      $win.on('ready', isVisible())
         .on('resize scroll', function () {
           changed = true;
         })
-        .on('vis', isVisible);
       setInterval(function () {
         if (changed) {
           changed = false;
-          trg();
+          isVisible();
         }
       }, 250);
     });
