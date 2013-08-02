@@ -20,7 +20,6 @@
             elPosY = $this.offset().top + yMin;
           if (winPosX > elPosX && winPosY > elPosY) {
             $this.addClass(settings.className || settings.standardClassName);
-            $this.off('vis');
           }
         },
         trg = function () {
