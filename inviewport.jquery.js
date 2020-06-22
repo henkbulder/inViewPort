@@ -20,6 +20,7 @@
             elPosX = $this.offset().left + xMin,
             elPosY = $this.offset().top + yMin;
           if (winPosX > elPosX && winPosY > elPosY) {
+            if(!$this.hasClass(c)) $this.trigger("inviewport");
             $this.addClass(c);
           }
         };
