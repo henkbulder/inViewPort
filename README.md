@@ -15,3 +15,6 @@ Usage: `$(selector).inviewport(options)`, where options is an object which may c
 `threshold` sets the minimum percentage of the element which has to be in view before the class gets added. Defaults to 100. 
 
 `className` sets the name of the class. Defaults to 'in-view'.
+
+Scott Sanders added a custom event trigger so you can now fire specific JS code when the element comes into view:
+`$(selector).on("inviewport", function() { /* code here */ });`
